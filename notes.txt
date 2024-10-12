@@ -1,0 +1,112 @@
+eclipse -> spring.io -> project create -> eclipse import 
+spring starter 
+
+eclipse ->spring plugins -> spring features -> STS 
+vscode -> 
+
+STS
+iJ 
+
+
+
+spring web -> .xml configuration -> 
+BOOT -> zero configuration -> no xml 
+	custom configuration -> 
+			server port 
+			db url username password 
+			application.properties
+				key=value  
+
+1) Spring WEB MVC 
+2) Spring REST API 
+
+------------------------------------------------------------------------------------------
+
+file => new => spring starter project => name , group , artifact , mave , 17 , package:com 
+		dep add => spring web , spring dev tools
+		finish 
+
+	jsp support => project => tomcat embedded jasper 
+	 
+-----------------------------------------------------------------------------------------
+STS -> jsp -> not support -> 
+	J2EE -> jsp -> 
+	
+		Help -> Eclipse Marketplace -> popular-> java and webdeveloper -> install 
+		
+----------------------------------------------------------------
+
+application.properties 
+	key=value 
+
+?	src ->main -> resources -> 	
+
+
+	server ->port ->change 
+
+
+
+LoginServlet
+SignupServlet
+XX
+XX
+XX
+XX
+
+Controller -> method method method 
+SessionController 
+ProductController 
+CartController 
+OrderController 
+
+
+
+
+
+request.getParameter("firstName");  -> remove 
+
+POJO => 
+BEAN Class => class -> variable -> private -> getters setters -> 
+
+-------------------------------------------------------------
+
+validate InputNumber.jsp --> required field-> 
+			n1
+			n2
+			opr
+			
+			error -> true -> return "InputXXX" 
+					 false -> process
+					 
+-------------------------------------------------------------					  
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
