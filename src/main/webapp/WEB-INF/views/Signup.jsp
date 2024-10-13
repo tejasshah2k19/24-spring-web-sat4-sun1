@@ -20,33 +20,40 @@
 				<form action="saveuser" method="post">
 					<div class="mb-3">
 						<label for="firstName" class="form-label">First Name</label> <input
-							type="text" class="form-control" name="firstName"
-							placeholder="Enter your first name">
+							type="text" class="form-control" value="${user.firstName}" name="firstName"
+							placeholder="Enter your first name"> <span
+							class="text-danger">
+							${result.getFieldError("firstName").getDefaultMessage()}</span>
 					</div>
 					<div class="mb-3">
 						<label for="lastName" class="form-label">Last Name</label> <input
-							type="text" class="form-control" name="lastName"
-							placeholder="Enter your last name">
+							type="text" class="form-control" name="lastName"  value="${user.lastName}" 
+							placeholder="Enter your last name"> <span
+							class="text-danger">
+							${result.getFieldError("lastName").getDefaultMessage()} </span>
 					</div>
 					<div class="mb-3">
 						<label for="email" class="form-label">Email address</label> <input
-							type="email" class="form-control" name="email"
-							placeholder="Enter your email">
+							type="text" class="form-control" name="email"  value="${user.email}" 
+							placeholder="Enter your email"> <span class="text-danger">
+							${result.getFieldError("email").getDefaultMessage()} </span>
 					</div>
 					<div class="mb-3">
 						<label for="password" class="form-label">Password</label> <input
 							type="password" class="form-control" name="password"
-							placeholder="Enter your password">
+							placeholder="Enter your password"> <span
+							class="text-danger">
+							${result.getFieldError("password").getDefaultMessage()} </span>
 					</div>
 					<button type="submit" class="btn btn-primary w-100">Sign
 						Up</button>
 				</form>
-		<a href="login">Login</a>
+				<a href="login">Login</a>
 
 			</div>
 
 		</div>
-		
+
 	</div>
 
 	<script

@@ -80,7 +80,21 @@ validate InputNumber.jsp --> required field->
 					 
 -------------------------------------------------------------					  
 			
+validation using spring ->	
 
+	1) validator -> jar {pom.xml} 
+		right click on project -> 
+				click on spring -> add starter -> 
+				
+	2) validation rule -> annotation -> 
+			
+				firstName -> not blank 
+						  -> only alphabets 
+						  
+  3) @Validated -> rule check 
+  4) BindingResult -> 
+						  
+-------------------------------------------------------------					  
 
 
 

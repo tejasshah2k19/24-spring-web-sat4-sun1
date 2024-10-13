@@ -1,9 +1,17 @@
 package com.bean;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
 public class InputNumberBean {
 
-	private Integer n1;
+	@NotNull(message = "Please Enter Number1")
+	private Integer n1;//non primitive 
+	
+	@NotNull(message = "Please Enter Number2")
 	private Integer n2;
+	
+	@NotBlank(message = "Please Select Operation")
 	private String opr;
 
 	public Integer getN1() {
