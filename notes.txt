@@ -97,11 +97,96 @@ validation using spring ->
 -------------------------------------------------------------					  
 
 
+we can not access views/jsp directly 
+	we need to access jsp using controller 
+	
+		you must have to create @Getmapping("/url") to open the jsp 
+		jsp will access via above url 
+		
+		
+		jsp input -> submit -> action -> method=post 
+			@Postmapping("/url") -> request process -> 
+			
+			
+	if you want to transfer data from controller -> to next page 
+		you have to Model interface from spring.ui 
+		Model is same as request.setAttribute("",""); 
+				
+----------------------------------------------------------------------			
+	
+	How to read data in spring?
+	@Postmapping("/url") 
+		we can read input using bean class 
+		
+	we dont need to user request.getParameter("xxX"); 
+	we have to use pojo class -> bean class -> getters setters 	
+-----------------------------------------------------------------------		
+	
+	how to establish db connection?
+	how to do jdbc? 
+	how to perform crud? 
+	
+	spring + database 
+					
+
+	1) lib/dep/jar ->pom.xml
+				1.1) spring jdbc [ spring data jdbc  ]  
+				1.2) database drivers [mysql driver] [mysql->connector , oracle->classes12.jar ] 
+					
+
+	2) configuration --> application.properties  
+		driverClass
+		url
+		userName
+		password 
+		
+-----------------------------------------------------------------------------
+		
+	query execution := 
+	
+	database -> sql ->query->run 
+	
+	Connection 
+	PreparedStatement
+	
+	JdbcTempalte -> is responsible to execute your sql queries 
+	
+		update() -> insert update delete 
+		query()
+		queryForObject()
+	
+	@Autowired 
+	JdbcTemplate stmt; 
+		
+	where we write sql queries ? in which class ? 
+	dao folder -> class -> method -> query 
+	
+	
+	product -> 
+		productId
+		name 
+		price 
+		qty 
+		discount 
+		category 
+		
+	create table products(
+		productId integer primary key auto_increment,
+		name varchar(20),
+		price integer,
+		qty int,
+		discount int,
+		category varchar(20)
+		);
+	
+-------------------------------------------------------------------------------	
+	 
+	@Getmppaing -> jsp - open -> read product info 
+	@Postmapping -> request read -> dao -> insert  
+			
 
 
-
-
-
+	
 
 
 

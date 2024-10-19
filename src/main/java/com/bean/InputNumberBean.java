@@ -1,11 +1,15 @@
 package com.bean;
 
+import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 
 public class InputNumberBean {
 
 	@NotNull(message = "Please Enter Number1")
+	@Digits(integer = 5,fraction = 0,message = "Please Enter Valid Number")
+	
 	private Integer n1;//non primitive 
 	
 	@NotNull(message = "Please Enter Number2")
