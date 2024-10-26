@@ -184,6 +184,58 @@ we can not access views/jsp directly
 	@Getmppaing -> jsp - open -> read product info 
 	@Postmapping -> request read -> dao -> insert  
 			
+--------------------------------------------------------------------------------------
+
+_________ dependency we need to add for database in spring? 
+spring data jdbc 
+MySQL connector 
+
+
+___________ class is responsible to execute query in spring ? 
+JdbcTemplate 
+
+
+____________ method od JdbcTemplate we use to perform insert query? 
+update() 
+
+
+__________ class is responsible to write all logic of database part ? 
+dao class 
+
+
+______________ annotation is used for dao class in spring ? 
+@Repository 
+
+--------------------------------------------------------------------------------------
+
+
+
+select * from products -> 1 record 1+ records?	
+			n number of records 
+
+3 products 
+			
+productId name price  --> 
+productId name price  --> 
+productId name price  --> 
+
+data base record ----> bean ---> list
+
+
+JdbcTemplate -> update() : insert 
+			 -> query()  : select : n records 
+			 -> queryForObject() : select : 1 record  
+
+
+productId 
+name
+price 
+	ProductBean => set 
+	2 obj => set 
+	List => 
+---------------------------------------------------------------------------------------
+
+
 
 
 	

@@ -1,7 +1,10 @@
 package com.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -29,4 +32,16 @@ public class ProductController {
 		productDao.addProduct(productBean);
 		return "";
 	}
+	
+	@GetMapping("listproducts")
+	public String listProduct(Model model) {
+		
+		//get list from database 
+		List<ProductBean> productList = productDao.getAllProducts();	
+		//send list to jsp 
+		model.addAttribute("productList",productList);
+		System.out.println(productList.size());
+		return "ListProduct";
+	}
+	
 }
